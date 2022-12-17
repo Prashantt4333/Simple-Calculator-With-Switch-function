@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Calculator With JavaScript</title>
+    </head>
+    <body>
+        <form >
+            <input type="text" name="number1" />
+            <select name="operator">
+                <option value="+">+</option>
+                <option value="*">*</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+            </select>
+            <input type="text" name="number2" />
+            <input type="button" value="=" onclick="clicked()">
+            <span id="result" class=""></span>
+        </form>
+      
+
+
+        <script>
+            // function defination
+
+            //Globle Variable
+            let n1 = document.querySelector("input[name=\"number1\"]") // object.method
+            let n2 = document.querySelector("input[name=\"number2\"]") // object.method
+
+            let reslt = document.getElementById('result')
+            let op = document.querySelector('select[name="operator"]')
+           
+
+            function clicked (a, b, c){ //Formal Argument
+                //function Body
+
+                
+
+                //Strint ---> NuMBER
+
+                let x = parseFloat(n1.value)
+                let y = parseFloat(n2.value)
+
+                // console.log(x + y)
+                // console.log(reslt)
+                
+                switch(op.value){
+                    case '+':
+                        console.log(x + y);
+                        break;
+                    case '-':
+                        console.log(x - y);
+                        break;
+                    case '*':
+                        console.log(x * y);
+                        break;
+                    case '/':
+                        console.log(x / y);
+                        break;
+                    default :
+                    console.log(op.value)
+                    console.log("invalid value ")
+                }
+
+              reslt.innerHTML = x + y;
+
+
+                //Every function return something
+
+                
+            }
+
+
+
+        </script>
+
+    </body>
+</html>
